@@ -1,0 +1,102 @@
+1.
+create database yashraj;
+
+2.
+use yashraj;
+
+3.
+create table users
+     (
+     User_Id varchar(25) primary key,
+     Password varchar(25) not null,
+     Mobile_no varchar(11),
+     firstname varchar(25),
+     lastname varchar(25),
+     amount int(11) default 0,
+     status int(2) default 0);
+4.
+create table questions1
+    (
+     serial_no int(2) primary key,
+     question varchar(255),
+     option1 varchar(255),
+     option2 varchar(255),
+     option3 varchar(255),
+     answer varchar(255),
+     flag int(2) default 0);
+5.
+create table questions2
+     (
+     serial_no int(2) primary key,
+     question varchar(255),
+     option1 varchar(255),
+    option2 varchar(255),
+     option3 varchar(255),
+     answer varchar(255),
+     flag int(2) default 0);
+6.
+create table questions3
+     (
+     serial_no int(2) primary key,
+     question varchar(255),
+     option1 varchar(255),
+     option2 varchar(255),
+     option3 varchar(255),
+     answer varchar(255),
+     flag int(2) default 0);
+7.
+insert into questions1 values
+     (1,"Who is known as IRON MAN OF INDIA?","Govind Vallabh Pant","Jawaharlal Nehru","Subhash Chandra Bose","Sardar Vallabh Bhai Patel",0),
+(2,"Who is the author of the jungle book?","Robert Frost","Ruskin Bond","Robinson Crusoe","Rudyard Kipling" ,0),
+(3,"Who has won the most no. of Oscar Awards till date?","Robert De Niro","Michael Cane","Al Pacino","Walt Disney",0),
+(4,"Which was the first Non-Test-Playing Country to defeat India in an international cricket match?","Canada","Zimbabwe","East Africa","Sri Lanka",0),
+(5,"Who invented the Ballpoint Pen?","Watermann Brothers","Wright Brothers","Bicc Brothers","Biro Brothers",0),
+(6,"When did India change over to the decimal system of coinage?","April 1995","April 1958","April 1959","April 1957",0),
+(7,"What is the character name of Aamir Khan in the Film - 3 IDIOTS ?","Chatur Ramalingam","Raju Rastogi","Ranchod Das Chanchad","Phunsukh Wangdu",0),
+(8,"What is a Kulchha in the dish - MATAR KULCHHA - Made up of?","Sooji","Atta","Besan","Maida",0),
+(9,"20th August is celebrated as which of the following occasions?","No Tobacco Day","Earth Day","International Yoga Day","Sadbhavana Divas",0),
+(10,"The Great Victoria Desert is located in which of the following countries?","England","Canada","South Africa","Australia",0),
+     (11,"Members of the Rajya Sabha elected by which of the following bodies?","The Election Commission of India","The Lok Sabha","The Legislative Council","The Legislative Assembly",0),
+(12,"The Largest City of Latin America is - ","Caracas","Rio De Janerio","Buenos Aires","Mexico City",0),
+(13,"Who is the first Indian woman to win an Asian Games gold in 400m run?","P.T. Usha","M.L> Valsamma","K. Malleshwari","Kamaljit Sandhu",0),
+(14,"P. Hariprasad Chaurasia is a renowned player of which of the following instruments?","Sarod","Sitar","Tabla","Flute",0),
+(15,"Excise duty is a tax levied on which of the following commercial activities?","Import of goods","Export of goods","Retail of goods","Production of goods",0);
+
+
+8.
+
+insert into questions2 values
+(1,"Which part of a database holds only one type of data?","record","report","file","field",0),
+(2,"Which of the following films has been directed by Mr. Buddhadeb Gupta?","Mohra","Krantiveer","1942 - A Love Story","Charachar",0),
+(3,"The Battle of Plassey was fought in - ","1787","1767","1797","1757",0),
+(4,"What did J.B. Dunlop invent?","model airplane","rubber boot","automatic wheel rim","pneumtic rubber tyres",0),
+(5,"The no of chromosomes in Downs Syndrome is - ","46","48","45","47",0),
+(6,"Who led the Indian Delegation in the First World Conference on human rights?","Farooq Abdullah","Alam Khan","Dinesh Singh","Dr. Manmohan Singh",0),
+(7,"Who is Larry Pressler?","Football Player","Actor","Painter","Politician",0),
+(8,"Norepinephrine - used in medicines is used to increase -","respiration rate","urine production","saliva production","blood pressure",0),
+(9,"The UNESCO has award its PRIX JULES AWARD to one of the serials of Doordarshan Channel. Name the serial.","The World This Week","Surabhi","Eye Witness","Turning point",0),
+(10,"The limit beyond which stars suffer internal collapse is called?","Raman limit","Quasan zone","Aurora Boreolis","Chandrashekhar limit",0);
+
+9.
+
+insert into questions3 values
+ (1,"The United Nations declared the Year 1993 as the year of the - ","disabled","forest","girl child","indigenous people",0),
+(2,"Which Indian was given the title - TIGER?","B.S. Bedi","Sunil Gavaskar","Rahul Dravid","Mansur Ali Khan Pataudi",0),
+(3,"Triptakas are the sacred books of which of the following religious communities?","Hindus","Muslims","Jains","Buddhists",0),
+(4,"Name the type of soils whose parent materials are rich in sand.","alfsols","utisols","aridsols","spodsols",0),
+(5,"When was journalist day celebrated for the first time all over the country?","Oct 8 1984","Oct. 20 1984","Oct 1.1984","Oct. 28 1984",0),
+(6,"On whose name is the highest award for services to the development of cinema given?","Raj Kapoor","Amitabh Bachchan","Mina Kumari","Dada Saheb",0),
+(7,"The abrsorption of ink via blotting paper involves - ","viscosity of ink","siphon action","diffusion of ink through blotting paper","capillary action phenomenon",0),
+(8,"Universities in the presidency towns in India were established in the yaer - ","1858","1900","1909","1857",0),
+(9,"The Chairmanship/Presidency of the UN Security council rotates among the council members periodically after a duration of - ","a year","a quartere (3 months)","a half year (6 months)", "a month",0),
+(10,"Which of the following is not a type of expansion slot or bus design used in Advanced - Technology Class Systems? ","PCMCIA","ISA","EISA","PROM",0);
+
+10.
+ create table price_money
+ (
+ User_Id varchar(255),
+ Amount int(11),
+ account_no long,
+ payment_status int(11),
+ bank_name varchar(255),
+ foreign key (User_Id) references users (User_Id));
